@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+#authenticated {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+}
