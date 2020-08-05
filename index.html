@@ -12,6 +12,50 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>EFFERVESS</h1>
+<!--Unauthenticated-->
+      <div id="unauthenticated">
+      <!--Sign Up-->
+
+        <form id="sign-up">
+          <div>
+          <input name="credentials[email]" type="text" placeholder="username" />
+          <input name="credentials[password]" type="password" placeholder="password"/>
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
+          <button class="signup">Sign Up</button>
+        </div>
+        </form>
+        <!--Sign In-->
+        <form id="sign-in">
+          <div>
+          <input name="credentials[email]" type="text" placeholder="email" />
+          <input name="credentials[password]" type="password" placeholder="password" />
+          <button type="submit" class="signin">Sign In</button>
+        </div>
+        </form>
+
+      <p id="unauth-message"></p>
+
+    </div>
+
+    <div id="authenticated">
+
+        <p id="auth-message"></p>
+
+        <form id="change-pw">
+          <input name="passwords[old]" type="password" placeholder="old password" />
+          <input name="passwords[new]" type="password" placeholder="new password" />
+          <button class="changepw" type="submit">Change Password</button>
+        </form>
+
+
+        <form id="sign-out">
+          <button class"signout" type="submit">Sign Out</button>
+        </form>
+
+      <p>This is where show recipes button is</p>
+
+    </div>
+
     </body>
 </html>
