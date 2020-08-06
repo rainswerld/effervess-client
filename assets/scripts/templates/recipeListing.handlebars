@@ -1,0 +1,19 @@
+{{#each recipes as |recipe|}}
+  {{log recipe}}
+  <section data-id="{{recipe.id}}">
+    <h4>Recipe: {{recipe.beerName}}</h4>
+    <h6>Batch Size: {{recipe.batchSize}}</h6>
+    <h6>Grain Bill: {{recipe.grainBill}}</h6>
+    <h6>Hop Profile: {{recipe.hopProfile}}</h6>
+    <h6>Hop Schedule: {{recipe.hopSchedule}}</h6>
+    <h6>Dry Hop: {{recipe.dryHop}}</h6>
+    <h6>Yeast: {{recipe.yeast}}</h6>
+    <h6>Directions: {{recipe.directions}}</h6>
+    <h6>{{#if recipe.note}}
+        {{recipe.note}}
+      {{else}}
+        No notes yet.
+      {{/if}}</h6>
+  </section>
+
+{{/each}}
