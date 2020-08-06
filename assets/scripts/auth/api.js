@@ -1,6 +1,7 @@
 'use strict'
 // get access to the resource you're making requests to
 const config = require('../config.js')
+
 const store = require('../store.js')
 
 const signUp = function (formData) {
