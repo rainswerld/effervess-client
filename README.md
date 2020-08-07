@@ -17,7 +17,7 @@ I began my planning by trying to understand how the data should be stored, chang
 
 I used Asana to track what feature I wanted to focus on and what feaetures needed to be implemented in tihe future - this allowed me to turn an overwhelming task of creating a database that connected to a front-end client into digestible small steps. These steps were then converted into a sschedule of what needed to be done by what date to meet the deadline. I had four days to make an MVP (minimum viable product), so breaking the overall project down into small steps showed how many features I should get through in a day's time.
 
-I created wireframes to help guide what the overall style should look like and an ERD to better understand how the user would be accessing their resources. I wanted these to be dynamic since the app will evolve. Because of this decision, I used Miro to make my wireframes and an ERD application so that when the time comes I will be able to update both easily. 
+I created wireframes to help guide what the overall style should look like and an ERD to better understand how the user would be accessing their resources. I wanted these to be dynamic since the app will evolve. Because of this decision, I used Miro to make my wireframes and an ERD application so that when the time comes I will be able to update both easily.
 
 Finally, I used Notion to organize my thoughts, write some pseudo code, and try to better artciluate the issues and features I needed to add or change in the future.
 
@@ -52,9 +52,9 @@ Finally, I used Notion to organize my thoughts, write some pseudo code, and try 
 ## Images
 
 #### Wireframe:
-![wireframe](https://miro.com/app/board/o9J_koeZQ-U=/)
+- [wireframe](https://miro.com/app/board/o9J_koeZQ-U=/)
 
 ---
 
 #### ERD:
-![ERD](https://imgur.com/gallery/6aFLR5v)
+- [ERD](https://imgur.com/gallery/6aFLR5v)
