@@ -9,6 +9,7 @@ const signUpSuccess = function (response) {
 }
 
 const signUpFailed = function (error) {
+  $('#unauth-message').text('Failed to Sign Up')
   console.log(error)
 }
 
@@ -23,6 +24,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailed = function (error) {
+  $('#unauth-message').text('Failed to Sign In')
   console.log(error)
 }
 
@@ -32,6 +34,7 @@ const changePwSuccess = function () {
 }
 
 const changePwFailed = function (error) {
+  $('#auth-message').text('Failed to changed your password!')
   console.log(error)
 }
 
@@ -45,6 +48,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailed = function (error) {
+  $('#auth-message').text('Failed to sign out!')
   console.log(error)
 }
 
