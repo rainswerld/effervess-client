@@ -47,9 +47,21 @@ const updateRecipe = function (formData) {
   })
 }
 
+const showSingleRecipe = function (req) {
+  const recipeId = req.recipe._id
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes/' + recipeId,
+    method: 'GET'
+  })
+}
+
 module.exports = {
   showRecipes,
   createRecipe,
   deleteRecipe,
-  updateRecipe
+  updateRecipe,
+  showSingleRecipe
 }

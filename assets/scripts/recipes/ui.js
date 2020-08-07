@@ -34,6 +34,19 @@ const updateRecipeSuccess = function (response) {
   $('#update-recipe').trigger('reset')
 }
 
+const showSingleRecipeSuccess = function (response) {
+  // console.log('i am ajax response ', response)
+  $('#show-recipe').trigger('reset')
+  $('#content').show()
+  const showRecipesText = createRecipeTemplate({ recipe: response.recipe })
+  $('#content').html(showRecipesText)
+}
+
+const showSingleRecipeFailed = function (error) {
+  console.log(error)
+}
+
+// need failed messages for each function
 const failure = function (error) {
   console.log(error)
 }
@@ -43,5 +56,7 @@ module.exports = {
   createRecipeSuccess,
   deleteRecipeSuccess,
   updateRecipeSuccess,
+  showSingleRecipeSuccess,
+  showSingleRecipeFailed,
   failure
 }

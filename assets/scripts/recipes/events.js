@@ -31,9 +31,6 @@ const onDeleteRecipe = function (event) {
     .catch(ui.failure)
 }
 
-// when a user clicks update recipe -> they are taken to a page that displays new input fields
-// after successfully updating the recipes, they get taken back to the page that you can see the show recipes and the new recipe is displayed
-// could use store.recipeId = recipeId (this would then be updated everytime someone clicks a new recipe to update)
 const onUpdateRecipe = function (event) {
   event.preventDefault()
   const form = event.target
@@ -43,12 +40,22 @@ const onUpdateRecipe = function (event) {
     .catch(console.error)
 }
 
+const onShowSingleRecipe = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  api.showSingleRecipe(formData)
+    .then(ui.showSingleRecipeSuccess)
+    .catch(ui.showSingleRecipeFailed)
+}
+
 const addHandlers = () => {
   // add the on click handler for onShowRecipes
   $('#show-recipes').on('click', onShowRecipes)
   $('#create-recipe').on('submit', onCreateRecipe)
   $('#content').on('click', '.btn-danger', onDeleteRecipe)
   $('#update-recipe').on('submit', onUpdateRecipe)
+  $('#show-recipe').on('submit', onShowSingleRecipe)
 }
 
 module.exports = {
