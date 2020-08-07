@@ -11,7 +11,7 @@ const onShowRecipes = function (event) {
   event.preventDefault()
   api.showRecipes()
     .then(ui.showRecipesSuccess)
-    .then(ui.showRecipesFailed)
+    .catch(ui.showRecipesFailed)
 }
 
 const onCreateRecipe = function (event) {
