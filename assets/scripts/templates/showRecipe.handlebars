@@ -1,5 +1,4 @@
-{{#each recipes as |recipe|}}
-  {{log recipe}}
+  <!-- {{log recipe}} -->
   <section data-id="{{recipe._id}}">
     <h4>Recipe: {{recipe.beerName}}</h4>
     <h5>Recipe ID: {{recipe._id}}</h5>
@@ -10,13 +9,10 @@
     <h6>Dry Hop: {{recipe.dryHop}}</h6>
     <h6>Yeast: {{recipe.yeast}}</h6>
     <h6>Directions: {{recipe.directions}}</h6>
-    <h6>{{#if recipe.note}}
+    <h6>Notes:{{#if recipe.note}}
         {{recipe.note}}
       {{else}}
         No notes yet.
       {{/if}}</h6>
-    <button type="button" class="btn btn-danger delete-recipe" data-id="{{recipe._id}}">Remove Recipe</button>
-    <!-- <button type="button" class="btn btn-success update-recipe" data-id="{{recipe._id}}">Update Recipe</button> -->
+      <button type="button" class="btn btn-danger delete-recipe" data-id="{{recipe._id}}">Remove Recipe</button>
   </section>
-
-{{/each}}
