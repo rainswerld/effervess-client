@@ -1,20 +1,32 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
   <section data-id="{{recipe._id}}">
-    <h4>Recipe: {{recipe.beerName}}</h4>
-    <h5>Recipe ID: {{recipe._id}}</h5>
-    <h6>Batch Size: {{recipe.batchSize}}</h6>
-    <h6>Grain Bill: {{recipe.grainBill}}</h6>
-    <h6>Hop Profile: {{recipe.hopProfile}}</h6>
-    <h6>Hop Schedule: {{recipe.hopSchedule}}</h6>
-    <h6>Dry Hop: {{recipe.dryHop}}</h6>
-    <h6>Yeast: {{recipe.yeast}}</h6>
-    <h6>Directions: {{recipe.directions}}</h6>
-    <h6>Notes: {{#if recipe.note}}
+    <h4>Recipe:</h4>
+    <p id="recipeName recipe">{{recipe.beerName}}</p>
+    <h5>Recipe ID:</h5>
+    <p id="recipeId recipe">{{recipe._id}}</p>
+    <h5>Batch Size:</h5>
+    <p id="batchSize recipe">{{recipe.batchSize}}</p>
+    <h5>Grain Bill:</h5>
+    <p id="grainBill recipe">{{recipe.grainBill}}</p>
+    <h5>Hop Profile:</h5>
+    <p id="hopProfile recipe">{{recipe.hopProfile}}</p>
+    <h5>Hop Schedule:</h5>
+    <p id="hopSchedule recipe">{{recipe.hopSchedule}}</p>
+    <h5>Dry Hop:</h5>
+    <p id="dryHop recipe">{{recipe.dryHop}}</p>
+    <h5>Yeast:</h5>
+    <p id="yeast recipe">{{recipe.yeast}}</p>
+    <h5>Directions:</h5>
+    <p id="directions recipe">{{recipe.directions}}</p>
+    <h6>Notes:</h6>
+    <p id="notes recipe">
+      {{#if recipe.note}}
         {{recipe.note}}
       {{else}}
         No notes yet.
-      {{/if}}</h6>
+      {{/if}}
+    </p>
     <button type="button" class="btn btn-danger delete-recipe" data-id="{{recipe._id}}">Remove Recipe</button>
     <!-- <button type="button" class="btn btn-success update-recipe" data-id="{{recipe._id}}">Update Recipe</button> -->
   </section>
