@@ -11,7 +11,7 @@ const onShowRecipes = function (event) {
   event.preventDefault()
   api.showRecipes()
     .then(ui.showRecipesSuccess)
-    .then(ui.failure)
+    .then(ui.showRecipesFailed)
 }
 
 const onCreateRecipe = function (event) {
@@ -20,7 +20,7 @@ const onCreateRecipe = function (event) {
   const formData = getFormFields(form)
   api.createRecipe(formData)
     .then(ui.createRecipeSuccess)
-    .catch(ui.failure)
+    .catch(ui.createRecipeFailed)
 }
 
 const onDeleteRecipe = function (event) {
@@ -28,7 +28,7 @@ const onDeleteRecipe = function (event) {
   const recipeId = $(event.target).data('id')
   api.deleteRecipe(recipeId)
     .then(ui.deleteRecipeSuccess)
-    .catch(ui.failure)
+    .catch(ui.deleteRecipeFailed)
 }
 
 const onUpdateRecipe = function (event) {
@@ -37,7 +37,7 @@ const onUpdateRecipe = function (event) {
   const formData = getFormFields(form)
   api.updateRecipe(formData)
     .then(ui.updateRecipeSuccess)
-    .catch(console.error)
+    .catch(ui.updateRecipeFailed)
 }
 
 const onShowSingleRecipe = function (event) {
