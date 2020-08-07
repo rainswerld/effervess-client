@@ -14,6 +14,42 @@ const showRecipes = function () {
   })
 }
 
+const createRecipe = function (formData) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes',
+    method: 'POST',
+    data: formData
+  })
+}
+
+const deleteRecipe = function (recipeId) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes/' + recipeId,
+    method: 'DELETE'
+  })
+}
+
+const updateRecipe = function (formData) {
+  const recipeId = formData.recipe._id
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes/' + recipeId,
+    method: 'PATCH',
+    data: formData
+  })
+}
+
 module.exports = {
-  showRecipes
+  showRecipes,
+  createRecipe,
+  deleteRecipe,
+  updateRecipe
 }
