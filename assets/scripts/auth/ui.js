@@ -14,6 +14,7 @@ const signUpFailed = function (error) {
 }
 
 const signInSuccess = function (response) {
+  $('#content').hide()
   store.user = response.user
   $('#unauth-message').hide()
   $('#unauthenticated').hide()
