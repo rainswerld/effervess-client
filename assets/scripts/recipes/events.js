@@ -14,6 +14,13 @@ const onShowRecipes = function (event) {
     .catch(ui.showRecipesFailed)
 }
 
+const onCreateNewClick = function (event) {
+  event.preventDefault()
+  $('#create-recipe').show()
+  $('#auth-message').hide()
+  $('#update-recipe').hide()
+}
+
 const onCreateRecipe = function (event) {
   event.preventDefault()
   const form = event.target
@@ -53,6 +60,7 @@ const addHandlers = () => {
   // add the on click handler for onShowRecipes
   $('#show-recipes').on('click', onShowRecipes)
   $('#create-recipe').on('submit', onCreateRecipe)
+  $('#createNewRecipe').on('click', onCreateNewClick)
   $('#content').on('click', '.btn-danger', onDeleteRecipe)
   $('#update-recipe').on('submit', onUpdateRecipe)
   $('#show-recipe').on('submit', onShowSingleRecipe)
