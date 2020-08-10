@@ -40,6 +40,7 @@ const createRecipeFailed = function (error) {
 }
 
 const deleteRecipeSuccess = function () {
+  $('#auth-message').hide()
   $('#failed').hide()
   $('#content').hide()
   $('#deleteSuccess').show()
@@ -53,6 +54,7 @@ const deleteRecipeFailed = function (error) {
 }
 
 const updateRecipeSuccess = function (response) {
+  $('#auth-message').hide()
   $('#failed').hide()
   $('#content').text('Recipe Successfully updated!')
   $('#update-recipe').trigger('reset')
@@ -66,6 +68,7 @@ const updateRecipeFailed = function (error) {
 }
 
 const showSingleRecipeSuccess = function (response) {
+  $('#auth-message').hide()
   $('#failed').hide()
   $('#show-recipe').trigger('reset')
   $('#content').show()
