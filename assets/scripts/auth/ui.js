@@ -20,7 +20,7 @@ const signInSuccess = function (response) {
   $('#unauthenticated').hide()
   $('#authenticated').show()
   $('#auth-message').show()
-  $('#auth-message').text('Sign In Successful!')
+  $('#auth-message').text('✔︎Sign In Successful! ✔︎')
   $('form').trigger('reset')
 }
 
