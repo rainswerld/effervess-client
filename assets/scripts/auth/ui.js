@@ -31,8 +31,11 @@ const signInFailed = function (error) {
 }
 
 const changePwSuccess = function () {
+  $('#change-pw').hide()
+  $('#changePwBtn').show()
   $('#auth-message').show()
   $('#auth-message').text('You changed your password!')
+  $('form').trigger('reset')
 }
 
 const changePwFailed = function (error) {
