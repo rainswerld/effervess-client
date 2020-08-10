@@ -42,6 +42,9 @@
         </div>
       </div>
     </form>
+
+      <p id="unauth-message" class="message"></p>
+
         <!--Sign In-->
         <form id="sign-in" class="container">
           <label for="sign-in" class="row justify-content-center">SIGN IN</label>
@@ -64,23 +67,51 @@
           </div>
         </form>
       <!--Display messages on the unauth view-->
-      <p id="unauth-message" class="message"></p>
 
     </div>
     <!--Authenticated-->
     <div id="authenticated">
-        <!--Display messages on the Auth view-->
-        <p id="auth-message" class="message"></p>
+
         <!--Change Password-->
-        <form id="change-pw">
-          <input name="passwords[old]" type="password" placeholder="old password" />
-          <input name="passwords[new]" type="password" placeholder="new password" />
-          <button class="changepw" type="submit">Change Password</button>
+        <div id="changePwBtn" class="container">
+          <div class="row">
+            <div class="col">
+              <button class="btn toChangePw">Change Password</button>
+            </div>
+          </div>
+        </div>
+
+        <form id="change-pw" class="container">
+          <div class="row">
+            <div class="col">
+              <input class="form-control" name="passwords[old]" type="password" placeholder="old password" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input class="form-control" name="passwords[new]" type="password" placeholder="new password" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="changepw btn" type="submit">Change Password</button>
+            </div>
+          </div>
         </form>
+
         <!--Sign Out-->
         <form id="sign-out">
-          <button class="signout" type="submit">Sign Out</button>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <button class="sign-out btn" type="submit">Sign Out</button>
+              </div>
+            </div>
+          </div>
         </form>
+
+        <p id="auth-message" class="message"></p>
+
         <!--Show all recipes-->
         <form id="show-recipes">
           <button class="index btn" type="submit">Show Recipes</button>
@@ -144,7 +175,7 @@
           </div>
         </form>
 
-        <form id="update-recipe">
+        <form id="update-recipe" class="container">
           <label for="update-recipe">Update Your Recipe</label>
           <div class="container">
             <p class="input-step">Grab the ID from the recipe you want to update</p>

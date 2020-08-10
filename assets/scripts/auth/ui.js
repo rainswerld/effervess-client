@@ -15,6 +15,7 @@ const signUpFailed = function (error) {
 
 const signInSuccess = function (response) {
   $('#content').hide()
+  $('#change-pw').hide()
   store.user = response.user
   $('#unauth-message').hide()
   $('#unauthenticated').hide()
@@ -58,6 +59,7 @@ module.exports = {
   signUpFailed,
   signInSuccess,
   signInFailed,
+  changePwBtn,
   changePwSuccess,
   changePwFailed,
   signOutSuccess,
