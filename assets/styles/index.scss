@@ -10,10 +10,15 @@ body {
 .btn {
   background-color: white;
   color: black;
+  margin: 5px;
 }
 
 .unauth-col {
   margin: 10px;
+}
+
+.test {
+  border: solid black;
 }
 
 #authenticated {
@@ -28,8 +33,32 @@ body {
   width: 500px;
 }
 
+.signout-btn {
+  border: solid black;
+}
+
+#create-recipe {
+  margin: 60px 0px 30px 0px;
+}
+
+#update-recipe {
+  margin: 60px 0px 30px 0px;
+}
+
+// .recipe-input {
+//   border: solid black;
+// }
+
+.input-step {
+  color: #F6E7C8;
+  font-family: 'Lemonada', cursive;
+  margin: 10px 0px 0px;
+}
+
 .message {
-  color: white;
+  text-align: center;
+  font-size: 30px;
+  color: #01C300;
   font-family: 'Lobster', cursive;
 }
 
@@ -39,6 +68,16 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin: 40px;
+}
+
+.recipe {
+  font-family: 'Lemonada', cursive;
+  text-align: center;
+  margin: 10px;
+}
+
+.recipe-content {
+  color:#76726A;
 }
 
 label {

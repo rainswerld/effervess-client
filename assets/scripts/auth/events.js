@@ -28,6 +28,12 @@ const onSignIn = function (event) {
     .catch(ui.signInFailed)
 }
 
+const onChangePwBtn = function (event) {
+  event.preventDefault()
+  $('#change-pw').show()
+  $('#changePwBtn').hide()
+}
+
 const onChangePw = function (event) {
   event.preventDefault()
   const form = event.target
@@ -48,6 +54,7 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-pw').on('submit', onChangePw)
+  $('#changePwBtn').on('click', onChangePwBtn)
   $('#sign-out').on('submit', onSignOut)
 }
 

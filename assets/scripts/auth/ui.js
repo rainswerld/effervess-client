@@ -15,6 +15,7 @@ const signUpFailed = function (error) {
 
 const signInSuccess = function (response) {
   $('#content').hide()
+  $('#change-pw').hide()
   store.user = response.user
   $('#unauth-message').hide()
   $('#unauthenticated').hide()
@@ -30,8 +31,11 @@ const signInFailed = function (error) {
 }
 
 const changePwSuccess = function () {
+  $('#change-pw').hide()
+  $('#changePwBtn').show()
   $('#auth-message').show()
   $('#auth-message').text('You changed your password!')
+  $('form').trigger('reset')
 }
 
 const changePwFailed = function (error) {
@@ -58,6 +62,7 @@ module.exports = {
   signUpFailed,
   signInSuccess,
   signInFailed,
+  changePwBtn,
   changePwSuccess,
   changePwFailed,
   signOutSuccess,

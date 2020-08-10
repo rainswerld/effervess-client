@@ -29,6 +29,7 @@ const createRecipeSuccess = function (response) {
   $('#content').show()
   const showRecipesText = createRecipeTemplate({ recipe: response.recipe })
   $('#content').html(showRecipesText)
+  $('#auth-message').text('Recipe Created!')
 }
 
 const createRecipeFailed = function (error) {
