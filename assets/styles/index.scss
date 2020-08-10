@@ -10,6 +10,7 @@ body {
 .btn {
   background-color: white;
   color: black;
+  margin: 5px;
 }
 
 .unauth-col {
@@ -28,8 +29,20 @@ body {
   width: 500px;
 }
 
+#create-recipe {
+  margin: 60px 0px 30px 0px;
+}
+
+.input-step {
+  color: #F6E7C8;
+  font-family: 'Lemonada', cursive;
+  margin: 10px 0px 0px;
+}
+
 .message {
-  color: white;
+  text-align: center;
+  font-size: 30px;
+  color: #01C300;
   font-family: 'Lobster', cursive;
 }
 
