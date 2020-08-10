@@ -18,53 +18,50 @@
       <div id="unauthenticated">
       <!--Sign Up-->
     <form id="sign-up" class="container">
+      <label for="sign-up" class="row justify-content-center">Sign Up</label>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-4 test-col">
+          <div class="col-md-4 unauth-col">
             <input class="form-control justify-content-center" name="credentials[email]" type="text" placeholder="username" />
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 test-col">
+          <div class="col-md-4 unauth-col">
             <input class="form-control" name="credentials[password]" type="password" placeholder="password"/>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 test-col">
+          <div class="col-md-4 unauth-col">
             <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 test-col">
+          <div class="col-md-4 unauth-col">
             <button class="signup btn btn-primary">Sign Up</button>
           </div>
         </div>
       </div>
     </form>
-        <!-- <form id="sign-up" class="container">
-          <div class="form-group">
-            <div class="col-6">
-              <input class="form-control justify-content-center" name="credentials[email]" type="text" placeholder="username" />
-            </div>
-            <div class="col-6">
-              <input class="form-control" name="credentials[password]" type="password" placeholder="password"/>
-            </div>
-            <div class="col-6">
-              <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
-            </div>
-            <div class="col-4">
-              <button class="signup btn btn-primary">Sign Up</button>
-            </div>
-
-        </div>
-        </form> -->
         <!--Sign In-->
-        <form id="sign-in">
-          <div>
-          <input name="credentials[email]" type="text" placeholder="email" />
-          <input name="credentials[password]" type="password" placeholder="password" />
-          <button type="submit" class="signin">Sign In</button>
-        </div>
+        <form id="sign-in" class="container">
+          <label for="sign-in" class="row justify-content-center">Sign In</label>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-4 unauth-col">
+                <input class="form-control justify-content-center" name="credentials[email]" type="text" placeholder="email" />
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-4 unauth-col">
+                <input class="form-control justify-content-center" name="credentials[password]" type="password" placeholder="password" />
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-4 unauth-col">
+                <button type="submit" class="signin btn btn-primary">Sign In</button>
+              </div>
+            </div>
+          </div>
         </form>
       <!--Display messages on the unauth view-->
       <p id="unauth-message"></p>
@@ -125,6 +122,8 @@
       <div id="deleteSuccess"></div>
 
     </div>
-
+  <footer>
+    Created by @rainswerld
+  </footer>
     </body>
 </html>
