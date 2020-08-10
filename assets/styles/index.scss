@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  margin: 30px;
+}
+
+.test-col {
+  margin: 10px;
+}
+
 #authenticated {
   display: none;
 }

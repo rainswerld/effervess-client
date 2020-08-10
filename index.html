@@ -13,17 +13,51 @@
     </head>
     <body>
       <h1>EFFERVESS</h1>
+
   <!--Unauthenticated-->
       <div id="unauthenticated">
       <!--Sign Up-->
-        <form id="sign-up">
-          <div>
-          <input name="credentials[email]" type="text" placeholder="username" />
-          <input name="credentials[password]" type="password" placeholder="password"/>
-          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
-          <button class="signup">Sign Up</button>
+    <form id="sign-up" class="container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 test-col">
+            <input class="form-control justify-content-center" name="credentials[email]" type="text" placeholder="username" />
+          </div>
         </div>
-        </form>
+        <div class="row justify-content-center">
+          <div class="col-md-4 test-col">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="password"/>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 test-col">
+            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 test-col">
+            <button class="signup btn btn-primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </form>
+        <!-- <form id="sign-up" class="container">
+          <div class="form-group">
+            <div class="col-6">
+              <input class="form-control justify-content-center" name="credentials[email]" type="text" placeholder="username" />
+            </div>
+            <div class="col-6">
+              <input class="form-control" name="credentials[password]" type="password" placeholder="password"/>
+            </div>
+            <div class="col-6">
+              <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
+            </div>
+            <div class="col-4">
+              <button class="signup btn btn-primary">Sign Up</button>
+            </div>
+
+        </div>
+        </form> -->
         <!--Sign In-->
         <form id="sign-in">
           <div>
