@@ -21,6 +21,14 @@ const onCreateNewClick = function (event) {
   $('#update-recipe').hide()
 }
 
+const onUpdateClick = function (event) {
+  event.preventDefault()
+  $('#updateRecipe').hide()
+  $('#update-recipe').show()
+  $('#auth-message').hide()
+  $('#create-recipe').hide()
+}
+
 const onCreateRecipe = function (event) {
   event.preventDefault()
   const form = event.target
@@ -61,6 +69,7 @@ const addHandlers = () => {
   $('#show-recipes').on('click', onShowRecipes)
   $('#create-recipe').on('submit', onCreateRecipe)
   $('#createNewRecipe').on('click', onCreateNewClick)
+  $('#updateRecipe').on('click', onUpdateClick)
   $('#content').on('click', '.btn-danger', onDeleteRecipe)
   $('#update-recipe').on('submit', onUpdateRecipe)
   $('#show-recipe').on('submit', onShowSingleRecipe)

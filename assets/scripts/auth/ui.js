@@ -15,6 +15,7 @@ const signUpFailed = function (error) {
 
 const signInSuccess = function (response) {
   $('#create-recipe').hide()
+  $('#update-recipe').hide()
   $('#content').hide()
   $('#change-pw').hide()
   store.user = response.user
