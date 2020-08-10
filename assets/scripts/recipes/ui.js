@@ -10,6 +10,7 @@ const createRecipeTemplate = require('../templates/showRecipe.handlebars')
 const store = require('../store.js')
 
 const showRecipesSuccess = function (response) {
+  $('#auth-message').hide()
   $('#failed').hide()
   $('#content').show()
   $('#deleteSuccess').hide()
@@ -54,9 +55,10 @@ const deleteRecipeFailed = function (error) {
 }
 
 const updateRecipeSuccess = function (response) {
-  $('#auth-message').hide()
+  $('#auth-message').show()
+  $('#content').hide()
   $('#failed').hide()
-  $('#content').text('Recipe Successfully updated!')
+  $('#auth-message').text('Recipe Successfully updated!')
   $('#update-recipe').trigger('reset')
 }
 
