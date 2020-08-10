@@ -83,7 +83,7 @@
         </form>
         <!--Show all recipes-->
         <form id="show-recipes">
-          <button class="index" type="submit">Show Recipes</button>
+          <button class="index btn" type="submit">Show Recipes</button>
         </form>
 
         <form id="create-recipe" class="container">
@@ -128,36 +128,78 @@
             </div>
           </div>
           <div class="container">
+            <p class="input-step">Notes</p>
+            <div class="row">
+              <div class="col-md-12 directions-input recipe-input">
+                <input class="col-md-12" name="recipe[note]" type="text" placeholder="ANY NOTES?" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
             <div class="row">
               <div class="col-md-3 recipe-input">
                 <button class="createRecipe btn" type="submit">CREATE RECIPE</button>
               </div>
             </div>
           </div>
-
-          <!-- <input name="recipe[beerName]" type="text" placeholder="BEER NAME" />
-          <input name="recipe[batchSize]" type="text" placeholder="HOW MANY GALLONS" />
-          <input name="recipe[grainBill]" type="text" placeholder="GRAINS" />
-          <input name="recipe[hopProfile]" type="text" placeholder="HOPS" />
-          <input name="recipe[hopSchedule]" type="text" placeholder="HOP ADDITIONS" />
-          <input name="recipe[dryHop]" type="text" placeholder="DRY HOPS" />
-          <input name="recipe[yeast]" type="text" placeholder="YEAST" />
-          <input name="recipe[directions]" type="text" placeholder="DIRECTIONS" />
-          <input name="recipe[note]" type="text" placeholder="ANY NOTES?" />
-          <button class="createRecipe" type="submit">Create Recipe!</button> -->
         </form>
 
         <form id="update-recipe">
-          <input name="recipe[_id]" type="text" placeholder="BEER ID" />
-          <input name="recipe[batchSize]" type="text" placeholder="HOW MANY GALLONS" />
-          <input name="recipe[grainBill]" type="text" placeholder="GRAINS" />
-          <input name="recipe[hopProfile]" type="text" placeholder="HOPS" />
-          <input name="recipe[hopSchedule]" type="text" placeholder="HOP ADDITIONS" />
-          <input name="recipe[dryHop]" type="text" placeholder="DRY HOPS" />
-          <input name="recipe[yeast]" type="text" placeholder="YEAST" />
-          <input name="recipe[directions]" type="text" placeholder="DIRECTIONS" />
-          <input name="recipe[note]" type="text" placeholder="ANY NOTES?" />
-          <button class="updateRecipe" type="submit">Update Recipe!</button>
+          <label for="update-recipe">Update Your Recipe</label>
+          <div class="container">
+            <p class="input-step">Grab the ID from the recipe you want to update</p>
+            <div class="row">
+              <div class="col-md-3 recipe-input">
+                <input class="col-12" name="recipe[_id]" type="text" placeholder="BEER ID" />
+              </div>
+            </div>
+          </div>
+          <div class="container" id="update-fields">
+            <div class="row">
+              <p class="input-step col-md-12">Update Your Recipe Below</p>
+              <div class="col-md-3 recipe-input">
+                <input class="col-12" name="recipe[batchSize]" type="text" placeholder="HOW MANY GALLONS" />
+              </div>
+              <div class="col-md-9 recipe-input">
+                <input class="col-12" name="recipe[grainBill]" type="text" placeholder="GRAINS" />
+              </div>
+              <div class="col-md-4 recipe-input">
+                <input class="col-12" name="recipe[hopProfile]" type="text" placeholder="HOPS" />
+              </div>
+              <div class="col-md-8 recipe-input">
+                <input class="col-12" name="recipe[hopSchedule]" type="text" placeholder="HOP ADDITIONS" />
+              </div>
+              <div class="col-md-4 recipe-input">
+                <input class="col-12" name="recipe[dryHop]" type="text" placeholder="DRY HOPS" />
+              </div>
+              <div class="col-md-4 recipe-input">
+                <input class="col-12" name="recipe[yeast]" type="text" placeholder="YEAST" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class="input-step">Update The Directions</p>
+            <div class="row">
+              <div class="col-md-12 recipe-input">
+                <input class="col-12" name="recipe[directions]" type="text" placeholder="DIRECTIONS" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class="input-step">Update Your Notes</p>
+            <div class="row">
+              <div class="col-md-4 recipe-input">
+                <input class="col-12" name="recipe[note]" type="text" placeholder="ANY NOTES?" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <button class="updateRecipe btn" type="submit">Update Recipe!</button>
+              </div>
+            </div>
+          </div>
         </form>
 
         <form id="show-recipe">
