@@ -1,26 +1,26 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
-  <section data-id="{{recipe._id}}">
-    <h4>Recipe:</h4>
-    <p id="recipeName recipe">{{recipe.beerName}}</p>
-    <h5>Recipe ID:</h5>
-    <p id="recipeId recipe">{{recipe._id}}</p>
-    <h5>Batch Size:</h5>
-    <p id="batchSize recipe">{{recipe.batchSize}}</p>
-    <h5>Grain Bill:</h5>
-    <p id="grainBill recipe">{{recipe.grainBill}}</p>
-    <h5>Hop Profile:</h5>
-    <p id="hopProfile recipe">{{recipe.hopProfile}}</p>
-    <h5>Hop Schedule:</h5>
-    <p id="hopSchedule recipe">{{recipe.hopSchedule}}</p>
-    <h5>Dry Hop:</h5>
-    <p id="dryHop recipe">{{recipe.dryHop}}</p>
-    <h5>Yeast:</h5>
-    <p id="yeast recipe">{{recipe.yeast}}</p>
-    <h5>Directions:</h5>
-    <p id="directions recipe">{{recipe.directions}}</p>
-    <h6>Notes:</h6>
-    <p id="notes recipe">
+  <section class="recipe" data-id="{{recipe._id}}">
+    <h4 class="recipe-content">Recipe:</h4>
+    <p id="recipeName">{{recipe.beerName}}</p>
+    <h5 class="recipe-content">Recipe ID:</h5>
+    <p id="recipeId">{{recipe._id}}</p>
+    <h5 class="recipe-content">Batch Size:</h5>
+    <p id="batchSize">{{recipe.batchSize}}</p>
+    <h5 class="recipe-content">Grain Bill:</h5>
+    <p id="grainBill">{{recipe.grainBill}}</p>
+    <h5 class="recipe-content">Hop Profile:</h5>
+    <p id="hopProfile">{{recipe.hopProfile}}</p>
+    <h5 class="recipe-content">Hop Schedule:</h5>
+    <p id="hopSchedule">{{recipe.hopSchedule}}</p>
+    <h5 class="recipe-content">Dry Hop:</h5>
+    <p id="dryHop">{{recipe.dryHop}}</p>
+    <h5 class="recipe-content">Yeast:</h5>
+    <p id="yeast">{{recipe.yeast}}</p>
+    <h5 class="recipe-content">Directions:</h5>
+    <p id="directions">{{recipe.directions}}</p>
+    <h6 class="recipe-content">Notes:</h6>
+    <p id="notes">
       {{#if recipe.note}}
         {{recipe.note}}
       {{else}}
