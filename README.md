@@ -50,6 +50,8 @@ In terms of problem solving, similar to how I broke down the big scope of the pr
 - Deciding on how hops should be modeled in my recipeSchema
 - Giving the user the ability to search using keywords
 - Styling
+- Make update into its own modal
+- Giving more specific failed messaging on authorization steps using conditions
 
 ## Images
 
