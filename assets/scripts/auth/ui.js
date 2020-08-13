@@ -8,9 +8,8 @@ const signUpSuccess = function (response) {
   $('form').trigger('reset')
 }
 
-const signUpFailed = function (error) {
+const signUpFailed = function () {
   $('#unauth-message').text('Failed to Sign Up')
-  console.log(error)
 }
 
 const signInSuccess = function (response) {
@@ -27,9 +26,8 @@ const signInSuccess = function (response) {
   $('form').trigger('reset')
 }
 
-const signInFailed = function (error) {
+const signInFailed = function () {
   $('#unauth-message').text('Failed to Sign In')
-  console.log(error)
 }
 
 const changePwSuccess = function () {
@@ -40,9 +38,8 @@ const changePwSuccess = function () {
   $('form').trigger('reset')
 }
 
-const changePwFailed = function (error) {
+const changePwFailed = function () {
   $('#auth-message').text('Failed to changed your password!')
-  console.log(error)
 }
 
 const signOutSuccess = function () {
@@ -54,9 +51,8 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 }
 
-const signOutFailed = function (error) {
+const signOutFailed = function () {
   $('#auth-message').text('Failed to sign out!')
-  console.log(error)
 }
 
 module.exports = {
@@ -64,7 +60,6 @@ module.exports = {
   signUpFailed,
   signInSuccess,
   signInFailed,
-  changePwBtn,
   changePwSuccess,
   changePwFailed,
   signOutSuccess,

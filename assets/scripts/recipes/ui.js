@@ -18,8 +18,7 @@ const showRecipesSuccess = function (response) {
   $('#content').html(showRecipesText)
 }
 
-const showRecipesFailed = function (error) {
-  console.log(error)
+const showRecipesFailed = function () {
   $('#failed').show()
   $('#failed').text('Failed to show recipes. Try again')
 }
@@ -33,8 +32,7 @@ const createRecipeSuccess = function (response) {
   $('#auth-message').text('Recipe Created!')
 }
 
-const createRecipeFailed = function (error) {
-  console.log(error)
+const createRecipeFailed = function () {
   $('#create-recipe').trigger('reset')
   $('#failed').show()
   $('#failed').text('Failed to create recipe. Try again')
@@ -48,8 +46,7 @@ const deleteRecipeSuccess = function () {
   $('#deleteSuccess').text('Recipe deleted')
 }
 
-const deleteRecipeFailed = function (error) {
-  console.log(error)
+const deleteRecipeFailed = function () {
   $('#failed').show()
   $('#failed').text('Failed to delete recipe. Try again')
 }
@@ -62,8 +59,7 @@ const updateRecipeSuccess = function (response) {
   $('#update-recipe').trigger('reset')
 }
 
-const updateRecipeFailed = function (error) {
-  console.log(error)
+const updateRecipeFailed = function () {
   $('#update-recipe').trigger('reset')
   $('#failed').show()
   $('#failed').text('Failed to update recipe. Try again')
@@ -78,18 +74,12 @@ const showSingleRecipeSuccess = function (response) {
   $('#content').html(showRecipesText)
 }
 
-const showSingleRecipeFailed = function (error) {
-  console.log(error)
+const showSingleRecipeFailed = function () {
   $('#show-recipe').trigger('reset')
   $('#failed').show()
   $('#failed').text('Could not show recipe')
   // put conditional in here that states if the recipe owner id does not match the current id, issue a message that says you can't update other people's recipes
 }
-
-// need failed messages for each function
-// const failure = function (error) {
-//   console.log(error)
-// }
 
 module.exports = {
   showRecipesSuccess,
